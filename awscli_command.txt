@@ -1,0 +1,38 @@
+#コレクション作成
+aws rekognition create-collection \
+--collection-id "" \
+--region us-west-2 \
+--profile adminuser
+
+#コレクション一覧を表示
+aws rekognition list-collections \
+--region us-west-2 \
+--profile adminuser
+
+#コレクションに画像を保存 
+aws rekognition index-faces \
+--image '{"S3Object":{"Bucket":"","Name":"1.jpg"}}' \
+--collection-id "" \
+--external-image-id "1.jpg" \
+--region us-west-2 \
+--profile adminuser
+
+#画像の特徴データを取得
+aws rekognition detect-faces \
+--image '{"S3Object":{"Bucket":"","Name":"1.jpg"}}' \
+--attributes "ALL" \
+--region us-west-2 \
+--profile adminuser
+
+#コレクション内の顔リストを表示
+aws rekognition list-faces \
+--collection-id "" \
+--region us-west-2 \
+--profile adminuser
+
+#コレクション内の顔の削除
+aws rekognition delete-faces \
+--collection-id "" \
+--face-ids "" \
+--region us-west-2 \
+--profile adminuser

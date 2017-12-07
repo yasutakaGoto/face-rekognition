@@ -1,0 +1,11 @@
+img {
+  width: 150px;
+}
+.img_box {
+  display: inline-block;
+  padding: 10px;
+  color: #444;
+}
+.img_box > p {
+  margin: 0;
+}

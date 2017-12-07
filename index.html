@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="main.css">
+    <!-- AWS SDK -->
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.163.0.min.js"></script>
+    <!-- jQueryCDN -->
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    <link rel="shortcut icon" href="">
+  </head>
+  <body>
+    <h3>AWS Rekognition テスト</h3>
+    <input type="text" value="" id="targetFile">
+    <input type="button" value="画像表示" id="showImgButton">
+    <div id="targetImg"></div>
+    
+    <input type="button" value="実行" id="rekognitionButton">
+    <div id="imgList2"></div>
+
+    <!-- SCRIPTS -->
+    <script src="rekognition.js"></script>
+  </body>
+</html>
